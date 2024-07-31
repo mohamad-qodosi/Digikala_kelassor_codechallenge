@@ -20,4 +20,3 @@ class Order :
             print(product.get_category() , end = " ")
             print(product.get_city(), end =" " )
             print()
-
