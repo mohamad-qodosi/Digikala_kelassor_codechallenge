@@ -21,8 +21,3 @@ class Order :
             print(product.get_city(), end =" " )
             print()
 
-    
-    
-
-
-     
