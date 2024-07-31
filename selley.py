@@ -8,6 +8,12 @@ class Seller:
         self.name = name
         self.password = password
 
+    def get_name(self):
+        return self.name
+
+    def get_password(self):
+        return self.password
+
     def add_product(self, name, price, category):
         self._product.price = price
         self._product.category = category
