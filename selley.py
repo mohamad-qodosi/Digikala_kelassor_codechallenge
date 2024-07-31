@@ -3,9 +3,10 @@ from product import ProductManager
 
 
 class Seller:
-    def init(self):
-        self._product = Product()
+    def init(self, name, password):
         self.product_manger = ProductManager()
+        self.name = name
+        self.password = password
 
     def add_product(self, name, price, category):
         self._product.price = price
