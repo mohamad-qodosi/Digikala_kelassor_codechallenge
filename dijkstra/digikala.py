@@ -47,7 +47,7 @@ def dijkstra(start: str, end: str) -> int:
             if current_distance % 100 == 0:
                 return int(current_distance / 100)
             else :
-                return (current_distance// 100) + 1
+                return int(current_distance// 100) + 1
         
         if visited[current_city]:
             continue
@@ -64,5 +64,3 @@ def dijkstra(start: str, end: str) -> int:
                     heapq.heappush(priority_queue, (new_distance, neighbor_index))
 
     return float("inf")  # Return infinity if there is no path from start to end
-
-
