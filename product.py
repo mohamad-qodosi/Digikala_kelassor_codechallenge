@@ -8,22 +8,7 @@ class Product:
         self.__origin = None
     
     def set_origin(self,origin):
-        self.__origin = origin
-
-    def get_product_name(self):
-        return self.__product_name
-    
-    def get_proccecing_time(self):
-        return self.__procceing_time
-    
-    def get_quantity(self):
-        return self.__quantity
-    
-    def get_price(self):
-        return self.__price
-    
-    def get_category(self):
-        return self.__category
+        self.origin = origin
 
 class ProductManager:
     def __init__(self) -> None:
