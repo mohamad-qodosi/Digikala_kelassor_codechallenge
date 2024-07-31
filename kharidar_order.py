@@ -1,5 +1,5 @@
 from user import User
-
+from product import Product
 
 class Kharidar(User):
     def __init__(self, name, password, role) -> None:
