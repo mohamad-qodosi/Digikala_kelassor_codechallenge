@@ -26,21 +26,16 @@ def dijkstra(start: str, end: str) -> int:
         'tabriz': 12,
     }
     
-    # Get the indices of the start and end cities
     start_index = cities_dict[start]
     end_index = cities_dict[end]
     
-    # Number of cities
     num_cities = len(cities_list)
     
-    # Initialize distances with infinity and set the distance to the start city to 0
     distances = [float('inf')] * num_cities
     distances[start_index] = 0
     
-    # Priority queue to store (distance, city_index) tuples
     priority_queue = [(0, start_index)]
     
-    # Boolean list to check if a city has been visited
     visited = [False] * num_cities
     
     while priority_queue:
@@ -49,9 +44,11 @@ def dijkstra(start: str, end: str) -> int:
         
         # If we have reached the end city, return the distance
         if current_city == end_index:
-            return current_distance
+            if current_distance % 100 == 0:
+                return int(current_distance / 100)
+            else :
+                return (current_distance// 100) + 1
         
-        # If the city is already visited, skip it
         if visited[current_city]:
             continue
         
@@ -68,6 +65,4 @@ def dijkstra(start: str, end: str) -> int:
     
     return float('inf')  # Return infinity if there is no path from start to end
 
-
-print(dijkstra('kerman', 'kerman'))
 
