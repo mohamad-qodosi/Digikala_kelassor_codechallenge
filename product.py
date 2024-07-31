@@ -10,10 +10,25 @@ class Product:
     def set_origin(self,origin):
         self.origin = origin
 
+    def get_category(self):
+        return self.__category
+    
+    def get_name(self):
+        return self.__product_name
+    
+    def get_quantity(self):
+        return self.__quantity
+    
+    def get_price(self):
+        return self.__price
+    
+    def get_proccecing_time(self):
+        return self.__procceing_time
+    
+
 class ProductManager:
     def __init__(self) -> None:
         self.product_list = []
-
     def search_product(self ,product_name):
         for product in self.product_list:
             if product.__product_name == product_name:
