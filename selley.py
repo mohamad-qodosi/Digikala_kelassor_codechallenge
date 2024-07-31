@@ -4,21 +4,24 @@ from product import ProductManager
 
 class Seller:
     def init(self, name, password):
-        self.product_manger = ProductManager()
-        self.name = name
-        self.password = password
+        self.__product_manger = ProductManager()
+        self.__name = name
+        self.__password = password
 
     def get_name(self):
-        return self.name
+        return self.__name
 
     def get_password(self):
-        return self.password
+        return self.__password
+
+    def seller_product_managet(self):
+        return self.__product_manger
 
     def add_product(self, name, price, category):
         self._product.price = price
         self._product.category = category
         self._product.product_name = name
-        self.product_manger.product_list.append(self)
+        self.__product_manger.product_list.append(self)
 
     def increase_quantity(self, tmp):
         self._product.quantity += tmp
