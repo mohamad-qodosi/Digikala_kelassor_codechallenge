@@ -19,6 +19,19 @@ def singin_singup() :
                 if username_inp == kharidar[0] and password_inp == kharidar[1]:
                     print("sign in was successful")
                     return username_inp , password_inp
+            print('unsuccessful attempt')
+            raise IndentationError
+
+        if identity == '2':
+            username_inp = input('enter your username : ')
+            password_inp = input('enter your password : ')
+            for seller in sellers_list :
+                if username_inp == seller[0] and password_inp == seller[1]:
+                    print("sign in was successful")
+                    return username_inp , password_inp
+            print('unsuccessful attemt')
+            raise IndentationError
             
         elif identity == '2':
             pass
+            
