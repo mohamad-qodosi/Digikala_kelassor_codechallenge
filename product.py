@@ -9,6 +9,9 @@ class Product:
     
     def set_origin(self,origin):
         self.origin = origin
+    
+    def get_product_name(self):
+        return self.product_name
 
 class ProductManager:
     def __init__(self) -> None:
